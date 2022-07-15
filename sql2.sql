@@ -132,7 +132,7 @@ JOIN ManufacturerDetails ON ManufacturerDetails.Manufr_id = ProductDetails.Manuf
 GROUP BY ManufacturerDetails.Manufr_name, YEAR(OrderDetails.OrderDate)
 
 --9) All Manufacturers whose products were sold more than 1500 Rs every year.
-SELECT Manufr_name, YEAR(OrderDetails.OrderDate)
+SELECT Manufr_name, YEAR(OrderDetails.OrderDate) AS Year
 FROM OrderDetails
 JOIN ProductDetails ON ProductDetails.OrderId = OrderDetails.OrderId
 JOIN ManufacturerDetails ON ManufacturerDetails.Manufr_id = ProductDetails.Manufr_id
